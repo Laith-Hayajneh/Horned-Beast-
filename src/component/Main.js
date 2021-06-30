@@ -55,7 +55,7 @@ class Main extends React.Component {
                    )
                })}
 
-
+{/* the old one  */}
                 {/* {ArrayPhoto.map((item, i) => {
                     return (
                         <HornedBeasts title={item.title}
