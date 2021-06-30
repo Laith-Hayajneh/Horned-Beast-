@@ -1,10 +1,14 @@
-import { react } from '@babel/types';
+
 import React from 'react';
+import HornedBeasts from './HornedBeasts';
 
 class Header extends React.Component {
     render(){
         return (
-            <h1> </h1>
+            <div>
+                 <h1>Lab-01 : HornedBeasts </h1>
+
+            </div>
             
         )
     }
