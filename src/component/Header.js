@@ -1,6 +1,6 @@
 
 import React from 'react';
-import HornedBeasts from './HornedBeasts';
+
 
 class Header extends React.Component {
     render(){
