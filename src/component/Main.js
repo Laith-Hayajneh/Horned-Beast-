@@ -1,29 +1,76 @@
 import React from 'react';
 import HornedBeasts from './HornedBeasts';
-import ArrayPhoto from  "./photoArray.json";
+import ArrayPhoto from "./photoArray.json";
+// import Form from 'react-bootstrap/Form'
+import  "./App.css"
+import FormList from './List';
 
 
 
-class Main extends React.Component{
+
+class Main extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            numberOfClicks: 0,
+            RenderedHorne : ArrayPhoto,
+        };
+    }
+
+    Filter=(event)=>{
+        let value =event.target.value;
+        let filteredArray =[]
+        filteredArray = ArrayPhoto.filter(element=>{
+            if(element.horns == value){return true}
+        })
+
+
+        this.setState({
+            RenderedHorne : filteredArray
+        })
+
+        if (filteredArray.length == 0){
+            this.setState({
+                RenderedHorne: ArrayPhoto
+            })
+        }
     
-    render(){
-        return(
+    
+    }
+
+    render() {
+        return (
             <div className="Horned">
-                {ArrayPhoto.map((item,i) => {
+
+               <FormList Filter={this.Filter}/>
+               {this.state.RenderedHorne.map((item,index)=>{
+                   return(
+                    <HornedBeasts title={item.title}
+                    image_url={item.image_url}
+                    description={item.description}
+                    key={index}
+                    passFundataOfModlee={this.props.passFundataOfModlee}
+                    passFunhandleClose={this.props.passFunhandleClose}
+                />
+                   )
+               })}
+
+
+                {/* {ArrayPhoto.map((item, i) => {
                     return (
-                        <HornedBeasts title={item.title} 
-                        image_url={item.image_url}
-                        description={item.description}
-                        key={i}
-                        passFundataOfModlee={this.props.passFundataOfModlee}
-                        passFunhandleClose={this.props.passFunhandleClose}
+                        <HornedBeasts title={item.title}
+                            image_url={item.image_url}
+                            description={item.description}
+                            key={i}
+                            passFundataOfModlee={this.props.passFundataOfModlee}
+                            passFunhandleClose={this.props.passFunhandleClose}
                         />
                     );
                 }
-                    
-                )}
 
-                
+                )} */}
+
+
             </div>
 
 

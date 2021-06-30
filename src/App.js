@@ -20,7 +20,7 @@ class App extends React.Component {
   handleClose = () => {
     this.setState({
       showmodle: false,
-      // elObj: {},
+      elObj: {},
     });
   };
 

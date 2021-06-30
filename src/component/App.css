@@ -40,7 +40,7 @@
 img{
   width: 300px;
   display: inline;
-  border: solid red;
+ 
 }
 div{
   display: inline;
@@ -88,3 +88,6 @@ div{
 {
   margin-left: 55px;
 }
+/* .form-control{
+  border: solid red;
+} */

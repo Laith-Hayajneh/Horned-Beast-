@@ -3,7 +3,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
-
 class HornedBeasts extends React.Component {
 
   constructor(props) {
@@ -24,6 +23,12 @@ class HornedBeasts extends React.Component {
   render() {
     return (
       <div className="cardHorned">
+        <div>
+          
+
+          
+
+        </div>
 
         <Card
           style={{ width: "18rem" }}
